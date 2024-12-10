@@ -1,0 +1,33 @@
+<div class="h-screen">
+    <div class="flex flex-col gap-3">
+        <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+            <input id="nombre" type="text" placeholder="Buscar por nombre" class="bg-transparent border border-[#07afd9] px-2 py-2 placeholder-[#07afd9] text-white 
+                       focus:outline-none focus:border-[#07afd9] w-full sm:w-auto" />
+            <button class="flex flex-col border border-[#07afd9] items-center justify-center px-2 py-2 group hover:bg-[#07afd9] transition-all duration-75 self-start sm:self-auto">
+                <i class="fa-solid fa-plus fa-beat text-[#07afd9] group-hover:text-white"></i>
+                <p class="text-[#07afd9] hidden sm:block group-hover:text-white">Agregar</p>
+            </button>
+        </div>
+
+        
+        <div class="overflow-x-auto">
+            <table class="w-full border border-[#07afd9] text-center text-red-900">
+                <thead class="bg-[#07afd9]">
+                    <tr>
+                        <th class="px-4 py-2 border-b border-r border-[#07afd9]">Código</th>
+                        <th class="px-4 py-2 border-b border-r border-[#07afd9]">Nombre</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-transparent">
+                    <tr *ngFor="let category of categories" class="hover:bg-[#07afd9]/20 transition">
+                      <td class="px-4 py-2 border-b border-r  border-[#07afd9]">{{ category?.id }}</td>
+                      <td class="px-4 py-2 border-b border-r border-[#07afd9]">{{ category?.name     }}</td>
+                    </tr>
+                  </tbody>
+                  
+            </table>
+        </div>
+        
+        
+    </div>
+</div>
